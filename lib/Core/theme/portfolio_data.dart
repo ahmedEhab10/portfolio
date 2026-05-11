@@ -155,11 +155,76 @@ class PortfolioData {
       ],
     ),
     ProjectModel(
-      title: 'More Projects Loading...',
+      title: 'Movies App',
       description:
-          'Actively building and learning. New projects will be showcased here as they are completed.',
-      chips: ['Flutter', 'Firebase', 'REST API'],
-      badge: 'In Progress',
+          'A comprehensive movie discovery application built with Flutter using Clean Architecture and BLoC. '
+          'Designed to allow users to browse movies by genre, search for titles, view detailed movie information including cast, and manage a personalized profile with a watchlist and viewing history.',
+      chips: ['Flutter', 'Dart', 'Clean Arch', 'BLoC', 'Dio', 'REST API'],
+      badge: 'App', // You can change this to 'Featured' or 'New'
+      githubUrl: 'https://github.com/ahmedEhab10/Movies_app',
+      features: [
+        'Secure authentication system (Login & Registration)',
+        'Dynamic home screen with featured movie carousels',
+        'Explore and filter movies by various genres',
+        'Real-time search functionality for discovering specific movies',
+        'Detailed movie pages including cast information and related suggestions',
+        'Personalized user profile to track watchlist and viewing history',
+        'Scalable Clean Architecture structure separating domain, data, and presentation',
+        'Robust state management using BLoC & Cubit',
+        'API integration using Dio for seamless remote data fetching',
+        'Responsive modern UI with custom animations and onboarding flow',
+      ],
+      images: [
+        // Ensure you create and add these screenshots to your portfolio's assets folder
+        'assets/images/Movies_app/Screen1.png',
+        'assets/images/Movies_app/Screen2.png',
+        'assets/images/Movies_app/Screen3.png',
+        'assets/images/Movies_app/Screen4.png',
+        'assets/images/Movies_app/Screen5.png',
+        'assets/images/Movies_app/Screen6.png',
+        'assets/images/Movies_app/Screen7.png',
+        'assets/images/Movies_app/Screen8.png',
+        'assets/images/Movies_app/Screen9.png',
+        'assets/images/Movies_app/Screen10.png',
+        'assets/images/Movies_app/Screen11.png',
+      ],
+    ),
+    ProjectModel(
+      title: 'Evently App',
+      description:
+          'Evently is an application for organizing parties and daily events, built using Flutter, Firebase, and Clean Architecture, Google Maps,and Bloc. '
+          'Designed to allow people to showcase their events and invite others, while also showing the events location on a map and making it easy to find. ',
+      chips: [
+        'Flutter',
+        'Dart',
+        'Clean Arch',
+        'BLoC',
+        'Firebase',
+        'Google Maps',
+        'Dark and Light Theme',
+      ],
+      badge: 'App', // You can change this to 'Featured' or 'New'
+      githubUrl: 'https://github.com/ahmedEhab10/Evently_App',
+      features: [
+        'Secure authentication system (Login & Registration)',
+        'Easy to use and extremely fast navigation',
+        'Explore and filter events by various genres',
+        'Using Google Maps has led to clearer routes and directions.',
+        'Scalable Clean Architecture structure separating domain, data, and presentation',
+        'Robust state management using BLoC & Cubit',
+
+        'Responsive modern UI with custom animations and onboarding flow',
+      ],
+      images: [
+        // Ensure you create and add these screenshots to your portfolio's assets folder
+        'assets/images/Evently_app/Screen1.png',
+        'assets/images/Evently_app/Screen2.png',
+        'assets/images/Evently_app/Screen3.png',
+        'assets/images/Evently_app/Screen4.png',
+        'assets/images/Evently_app/Screen5.png',
+        'assets/images/Evently_app/Screen6.png',
+        'assets/images/Evently_app/Screen7.png',
+      ],
     ),
   ];
 }
