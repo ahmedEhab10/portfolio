@@ -154,6 +154,51 @@ class PortfolioData {
         'assets/images/Hobix_Tracker/Screen7.png',
       ],
     ),
+
+    ProjectModel(
+      title: 'Route E-Commerce App',
+      description:
+          'A full-featured e-commerce application built with Flutter using Clean Architecture and BLoC/Cubit state management. '
+          'The app integrates with a REST API using Dio to handle authentication, product browsing, categories, brands, wishlist, cart operations, and responsive shopping flows.',
+      chips: [
+        'Flutter',
+        'Dart',
+        'Clean Arch',
+        'BLoC',
+        'Dio',
+        'REST API',
+        'SharedPrefs',
+      ],
+      badge: 'Featured',
+      githubUrl: 'https://github.com/ahmedEhab10/ecommerce-app',
+      features: [
+        'User authentication with login and registration flows',
+        'Token persistence using SharedPreferences',
+        'REST API integration with Dio for products, cart, wishlist, categories, and brands',
+        'Clean Architecture structure with data, domain, and presentation layers',
+        'BLoC/Cubit state management for auth, products, cart, favorites, categories, and brands',
+        'Home screen with promotional carousel, dynamic categories, and brand sections',
+        'Product catalog grid with category-based filtering support',
+        'Product details screen with image slider, rating, sold count, description, size, color, and quantity selection',
+        'Add-to-cart flow with loading, success, and error feedback',
+        'Cart management with item listing, quantity updates, product deletion, and total price display',
+        'Wishlist system with add/remove favorite products and local Cubit state syncing',
+        'Reusable UI components, validators, app resources, custom buttons, product cards, and responsive sizing',
+        'Profile screen UI with editable user information fields',
+        'Native splash screen and branded visual assets',
+      ],
+      images: [
+        'assets/assets/images/E_Commerce/Screen1.png',
+        'assets/assets/images/E_Commerce/Screen2.png',
+        'assets/assets/images/E_Commerce/Screen3.png',
+        'assets/assets/images/E_Commerce/Screen4.png',
+        'assets/assets/images/E_Commerce/Screen5.png',
+        'assets/assets/images/E_Commerce/Screen6.png',
+        'assets/assets/images/E_Commerce/Screen7.png',
+        'assets/assets/images/E_Commerce/Screen8.png',
+      ],
+    ),
+
     ProjectModel(
       title: 'Movies App',
       description:

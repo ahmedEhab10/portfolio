@@ -32,10 +32,12 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/Fit_App/
-    - assets/images/My_photo/
-    - assets/pdf/
-    - assets/images/Hobix_Tracker/
-    - assets/images/Movies_app/
-    - assets/images/Evently_app/
+    - assets/assets/images/Fit_App/
+    - assets/assets/images/My_photo/
+    - assets/assets/pdf/
+    - assets/assets/images/Hobix_Tracker/
+    - assets/assets/images/Movies_app/
+    - assets/assets/images/Evently_app/
+    - assets/assets/images/E_Commerce/
+
     
