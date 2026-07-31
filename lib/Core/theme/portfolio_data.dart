@@ -43,7 +43,8 @@ class PortfolioData {
   static const github = 'https://github.com/ahmedEhab10';
   static const linkedin = 'https://www.linkedin.com/in/ahmed-ehab-63389730a/';
   static const profileImage = 'assets/assets/images/My_photo/my_photo.jpg';
-  static const cvPath = 'assets/assets/pdf/Ahmed_Ehab_El-Badry_flutter_devloper3.pdf';
+  static const cvPath =
+      'assets/assets/pdf/Ahmed_Ehab_El-Badry_flutter_devloper3.pdf';
   // =================================
 
   static const heroTagline = 'Available for freelance';
@@ -142,7 +143,7 @@ class PortfolioData {
         'Provider',
       ],
       badge: 'Featured',
-      githubUrl: 'https://github.com/ahmedEhab10/StudyFlow',
+      githubUrl: 'https://github.com/ahmedEhab10/study_flow',
       features: [
         'Onboarding and profile setup flow saved via SharedPreferences',
         'Splash screen with animated branding and conditional routing',
