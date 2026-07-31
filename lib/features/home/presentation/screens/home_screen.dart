@@ -97,7 +97,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           // Floating navbar
           Positioned(
-            top: 0, left: 0, right: 0,
+            top: 0,
+            left: 0,
+            right: 0,
             child: _NavBar(
               scrolled: _scrolled,
               activeIndex: _activeIndex,
@@ -270,9 +272,7 @@ class _Footer extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 32),
       decoration: const BoxDecoration(
-        border: Border(
-          top: BorderSide(color: AppColors.border, width: 0.5),
-        ),
+        border: Border(top: BorderSide(color: AppColors.border, width: 0.5)),
       ),
       child: Column(
         children: [
@@ -327,7 +327,7 @@ class _Footer extends StatelessWidget {
 }
 
 class _SocialIcon extends StatefulWidget {
-  final IconData icon;
+  final FaIconData icon;
   final String url;
   const _SocialIcon({required this.icon, required this.url});
 
@@ -348,7 +348,8 @@ class _SocialIconState extends State<_SocialIcon> {
         onTap: () => launchUrl(Uri.parse(widget.url)),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          width: 40, height: 40,
+          width: 40,
+          height: 40,
           decoration: BoxDecoration(
             color: _hovered ? AppColors.accent.withAlpha(20) : AppColors.bg2,
             borderRadius: BorderRadius.circular(AppRadius.sm),

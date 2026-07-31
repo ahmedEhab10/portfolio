@@ -19,7 +19,7 @@ dependencies:
   flutter_animate: ^4.5.2
   visibility_detector: ^0.4.0+2
   carousel_slider: ^5.0.0
-  font_awesome_flutter: ^10.8.0
+  font_awesome_flutter: ^11.0.0
   animated_text_kit: ^4.2.2
   smooth_page_indicator: ^1.2.1
 
@@ -38,6 +38,5 @@ flutter:
     - assets/assets/images/Hobix_Tracker/
     - assets/assets/images/Movies_app/
     - assets/assets/images/Evently_app/
-    - assets/assets/images/E_Commerce/
-
-    
+    - assets/assets/assets/images/E_Commerce/
+    - assets/assets/assets/images/Study_flow/

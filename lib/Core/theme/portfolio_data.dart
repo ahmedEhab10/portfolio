@@ -42,8 +42,8 @@ class PortfolioData {
   static const email = 'ahmedhobaa24@gmail.com';
   static const github = 'https://github.com/ahmedEhab10';
   static const linkedin = 'https://www.linkedin.com/in/ahmed-ehab-63389730a/';
-  static const profileImage = 'assets/images/My_photo/my_photo.jpg';
-  static const cvPath = 'assets/pdf/Ahmed_Ehab_El-Badry_flutter_devloper3.pdf';
+  static const profileImage = 'assets/assets/images/My_photo/my_photo.jpg';
+  static const cvPath = 'assets/assets/pdf/Ahmed_Ehab_El-Badry_flutter_devloper3.pdf';
   // =================================
 
   static const heroTagline = 'Available for freelance';
@@ -108,22 +108,76 @@ class PortfolioData {
         'Clean Architecture with MVVM pattern',
       ],
       images: [
-        'assets/images/Fit_App/Screenshot_1749059729.png',
-        'assets/images/Fit_App/Screenshot_1749059767.png',
-        'assets/images/Fit_App/Screenshot_1749059781.png',
-        'assets/images/Fit_App/Screenshot_1749059816.png',
-        'assets/images/Fit_App/Screenshot_1749059843.png',
-        'assets/images/Fit_App/Screenshot_1749059847.png',
-        'assets/images/Fit_App/Screenshot_1749059858.png',
-        'assets/images/Fit_App/Screenshot_1749059868.png',
-        'assets/images/Fit_App/Screenshot_1749059901.png',
-        'assets/images/Fit_App/Screenshot_1749059907.png',
-        'assets/images/Fit_App/Screenshot_1749059963.png',
-        'assets/images/Fit_App/Screenshot_1749059981.png',
-        'assets/images/Fit_App/Screenshot_1749060004.png',
-        'assets/images/Fit_App/Screenshot_1749060034.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059729.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059767.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059781.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059816.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059843.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059847.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059858.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059868.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059901.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059907.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059963.png',
+        'assets/assets/images/Fit_App/Screenshot_1749059981.png',
+        'assets/assets/images/Fit_App/Screenshot_1749060004.png',
+        'assets/assets/images/Fit_App/Screenshot_1749060034.png',
       ],
     ),
+
+    ProjectModel(
+      title: 'StudyFlow',
+      description:
+          'A student-focused study assistant built with Flutter using feature-first Clean Architecture and BLoC/Cubit. '
+          'Helps students organize subjects, upload PDFs, manage notes and tasks, run timed study sessions, '
+          'and track academic momentum through streaks, a study calendar, and a full analytics dashboard.',
+      chips: [
+        'Flutter',
+        'Dart',
+        'Clean Arch',
+        'BLoC',
+        'Hive',
+        'SharedPrefs',
+        'fl_chart',
+        'Provider',
+      ],
+      badge: 'Featured',
+      githubUrl: 'https://github.com/ahmedEhab10/StudyFlow',
+      features: [
+        'Onboarding and profile setup flow saved via SharedPreferences',
+        'Splash screen with animated branding and conditional routing',
+        'Main layout with custom bottom navigation and animated tab switching',
+        'Home dashboard with daily streak, task completion stats, and bento-style subject grid',
+        'Subject management with add/delete, custom painted icons, and progress tracking',
+        'Subject details with PDF upload, note creation, and course completion progress',
+        'PDF pipeline with 25 MB validation, local storage via path_provider, and open_filex',
+        'Expandable note cards with smooth collapse/expand animation',
+        'Study session screen with singleton timer, goal presets, and animated progress rings',
+        'Study records saved to Hive and linked to subjects for calendar and analytics',
+        'Task planner with today/tomorrow/completed sections and swipe-to-delete',
+        'Study Calendar with streak grid, monthly heatmap, and day-detail cards',
+        'Progress dashboard with weekly bar chart, subject donut chart, and trend line using fl_chart',
+        'Per-subject analytics with live day streak and weekly progress comparison',
+        'Light and dark Material 3 themes with ThemeProvider toggle',
+        'Lottie-powered empty states and polished micro-interactions',
+      ],
+      images: [
+        'assets/assets/assets/images/Study_flow/Screen1.png',
+        'assets/assets/assets/images/Study_flow/Screen2.png',
+        'assets/assets/assets/images/Study_flow/Screen3.png',
+        'assets/assets/assets/images/Study_flow/Screen4.png',
+        'assets/assets/assets/images/Study_flow/Screen5.png',
+        'assets/assets/assets/images/Study_flow/Screen6.png',
+        'assets/assets/assets/images/Study_flow/Screen7.png',
+        'assets/assets/assets/images/Study_flow/Screen8.png',
+        'assets/assets/assets/images/Study_flow/Screen9.png',
+        'assets/assets/assets/images/Study_flow/Screen10.png',
+        'assets/assets/assets/images/Study_flow/Screen11.png',
+        'assets/assets/assets/images/Study_flow/Screen12.png',
+        'assets/assets/assets/images/Study_flow/Screen13.png',
+      ],
+    ),
+
     ProjectModel(
       title: 'Hobix Tracker',
       description:
@@ -145,13 +199,13 @@ class PortfolioData {
         'Exercise details with explanations and tracking',
       ],
       images: [
-        'assets/images/Hobix_Tracker/Screen1.png',
-        'assets/images/Hobix_Tracker/Screen2.png',
-        'assets/images/Hobix_Tracker/Screen3.png',
-        'assets/images/Hobix_Tracker/Screen4.png',
-        'assets/images/Hobix_Tracker/Screen5.png',
-        'assets/images/Hobix_Tracker/Screen6.png',
-        'assets/images/Hobix_Tracker/Screen7.png',
+        'assets/assets/images/Hobix_Tracker/Screen1.png',
+        'assets/assets/images/Hobix_Tracker/Screen2.png',
+        'assets/assets/images/Hobix_Tracker/Screen3.png',
+        'assets/assets/images/Hobix_Tracker/Screen4.png',
+        'assets/assets/images/Hobix_Tracker/Screen5.png',
+        'assets/assets/images/Hobix_Tracker/Screen6.png',
+        'assets/assets/images/Hobix_Tracker/Screen7.png',
       ],
     ),
 
@@ -205,7 +259,7 @@ class PortfolioData {
           'A comprehensive movie discovery application built with Flutter using Clean Architecture and BLoC. '
           'Designed to allow users to browse movies by genre, search for titles, view detailed movie information including cast, and manage a personalized profile with a watchlist and viewing history.',
       chips: ['Flutter', 'Dart', 'Clean Arch', 'BLoC', 'Dio', 'REST API'],
-      badge: 'App', // You can change this to 'Featured' or 'New'
+      badge: 'App',
       githubUrl: 'https://github.com/ahmedEhab10/Movies_app',
       features: [
         'Secure authentication system (Login & Registration)',
@@ -220,25 +274,25 @@ class PortfolioData {
         'Responsive modern UI with custom animations and onboarding flow',
       ],
       images: [
-        // Ensure you create and add these screenshots to your portfolio's assets folder
-        'assets/images/Movies_app/Screen1.png',
-        'assets/images/Movies_app/Screen2.png',
-        'assets/images/Movies_app/Screen3.png',
-        'assets/images/Movies_app/Screen4.png',
-        'assets/images/Movies_app/Screen5.png',
-        'assets/images/Movies_app/Screen6.png',
-        'assets/images/Movies_app/Screen7.png',
-        'assets/images/Movies_app/Screen8.png',
-        'assets/images/Movies_app/Screen9.png',
-        'assets/images/Movies_app/Screen10.png',
-        'assets/images/Movies_app/Screen11.png',
+        'assets/assets/images/Movies_app/Screen1.png',
+        'assets/assets/images/Movies_app/Screen2.png',
+        'assets/assets/images/Movies_app/Screen3.png',
+        'assets/assets/images/Movies_app/Screen4.png',
+        'assets/assets/images/Movies_app/Screen5.png',
+        'assets/assets/images/Movies_app/Screen6.png',
+        'assets/assets/images/Movies_app/Screen7.png',
+        'assets/assets/images/Movies_app/Screen8.png',
+        'assets/assets/images/Movies_app/Screen9.png',
+        'assets/assets/images/Movies_app/Screen10.png',
+        'assets/assets/images/Movies_app/Screen11.png',
       ],
     ),
+
     ProjectModel(
       title: 'Evently App',
       description:
-          'Evently is an application for organizing parties and daily events, built using Flutter, Firebase, and Clean Architecture, Google Maps,and Bloc. '
-          'Designed to allow people to showcase their events and invite others, while also showing the events location on a map and making it easy to find. ',
+          'Evently is an application for organizing parties and daily events, built using Flutter, Firebase, and Clean Architecture, Google Maps, and BLoC. '
+          'Designed to allow people to showcase their events and invite others, while also showing the event\'s location on a map.',
       chips: [
         'Flutter',
         'Dart',
@@ -246,29 +300,27 @@ class PortfolioData {
         'BLoC',
         'Firebase',
         'Google Maps',
-        'Dark and Light Theme',
+        'Themes',
       ],
-      badge: 'App', // You can change this to 'Featured' or 'New'
+      badge: 'App',
       githubUrl: 'https://github.com/ahmedEhab10/Evently_App',
       features: [
         'Secure authentication system (Login & Registration)',
         'Easy to use and extremely fast navigation',
         'Explore and filter events by various genres',
-        'Using Google Maps has led to clearer routes and directions.',
+        'Google Maps integration for clear routes and directions',
         'Scalable Clean Architecture structure separating domain, data, and presentation',
         'Robust state management using BLoC & Cubit',
-
         'Responsive modern UI with custom animations and onboarding flow',
       ],
       images: [
-        // Ensure you create and add these screenshots to your portfolio's assets folder
-        'assets/images/Evently_app/Screen1.png',
-        'assets/images/Evently_app/Screen2.png',
-        'assets/images/Evently_app/Screen3.png',
-        'assets/images/Evently_app/Screen4.png',
-        'assets/images/Evently_app/Screen5.png',
-        'assets/images/Evently_app/Screen6.png',
-        'assets/images/Evently_app/Screen7.png',
+        'assets/assets/images/Evently_app/Screen1.png',
+        'assets/assets/images/Evently_app/Screen2.png',
+        'assets/assets/images/Evently_app/Screen3.png',
+        'assets/assets/images/Evently_app/Screen4.png',
+        'assets/assets/images/Evently_app/Screen5.png',
+        'assets/assets/images/Evently_app/Screen6.png',
+        'assets/assets/images/Evently_app/Screen7.png',
       ],
     ),
   ];

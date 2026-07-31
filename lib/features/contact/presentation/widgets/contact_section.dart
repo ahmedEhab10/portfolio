@@ -157,10 +157,16 @@ class _ContactLinkState extends State<_ContactLink> {
                 ),
                 child: Center(
                   child: widget.icon is IconData
-                      ? Icon(widget.icon as IconData,
-                          size: 14, color: AppColors.accent)
-                      : FaIcon(widget.icon as IconData,
-                          size: 14, color: AppColors.accent),
+                      ? Icon(
+                          widget.icon as IconData,
+                          size: 14,
+                          color: AppColors.accent,
+                        )
+                      : FaIcon(
+                          widget.icon as FaIconData,
+                          size: 14,
+                          color: AppColors.accent,
+                        ),
                 ),
               ),
               const SizedBox(width: 12),
@@ -206,9 +212,7 @@ class _ContactFormState extends State<_ContactForm> {
     setState(() => _sending = true);
 
     // Build mailto URI as fallback
-    final subject = Uri.encodeComponent(
-      'Portfolio Contact from ${_name.text}',
-    );
+    final subject = Uri.encodeComponent('Portfolio Contact from ${_name.text}');
     final body = Uri.encodeComponent(
       'Name: ${_name.text}\nEmail: ${_email.text}\n\n${_msg.text}',
     );
@@ -256,14 +260,18 @@ class _ContactFormState extends State<_ContactForm> {
                 color: AppColors.accent2.withAlpha(20),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.check_rounded,
-                  color: AppColors.accent2, size: 28),
+              child: const Icon(
+                Icons.check_rounded,
+                color: AppColors.accent2,
+                size: 28,
+              ),
             ),
             const SizedBox(height: 16),
             Text(
               'Message Ready!',
-              style: AppTextStyles.subheading
-                  .copyWith(color: AppColors.accent2),
+              style: AppTextStyles.subheading.copyWith(
+                color: AppColors.accent2,
+              ),
             ),
             const SizedBox(height: 8),
             Text(
@@ -282,8 +290,9 @@ class _ContactFormState extends State<_ContactForm> {
         children: [
           TextFormField(
             controller: _name,
-            style: AppTextStyles.bodySmall
-                .copyWith(color: AppColors.textPrimary),
+            style: AppTextStyles.bodySmall.copyWith(
+              color: AppColors.textPrimary,
+            ),
             decoration: const InputDecoration(labelText: 'NAME'),
             validator: (v) =>
                 v == null || v.isEmpty ? 'Please enter your name' : null,
@@ -291,8 +300,9 @@ class _ContactFormState extends State<_ContactForm> {
           const SizedBox(height: 12),
           TextFormField(
             controller: _email,
-            style: AppTextStyles.bodySmall
-                .copyWith(color: AppColors.textPrimary),
+            style: AppTextStyles.bodySmall.copyWith(
+              color: AppColors.textPrimary,
+            ),
             decoration: const InputDecoration(labelText: 'EMAIL'),
             validator: (v) {
               if (v == null || v.isEmpty) return 'Please enter your email';
@@ -304,8 +314,9 @@ class _ContactFormState extends State<_ContactForm> {
           TextFormField(
             controller: _msg,
             maxLines: 4,
-            style: AppTextStyles.bodySmall
-                .copyWith(color: AppColors.textPrimary),
+            style: AppTextStyles.bodySmall.copyWith(
+              color: AppColors.textPrimary,
+            ),
             decoration: const InputDecoration(
               labelText: 'MESSAGE',
               alignLabelWithHint: true,

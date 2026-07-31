@@ -10,12 +10,67 @@ class ProjectsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isWide = MediaQuery.of(context).size.width > 700;
+    final width = MediaQuery.of(context).size.width;
     final projects = PortfolioData.projects;
+
+    // Responsive column count
+    final int crossAxisCount;
+    final double horizontalPadding;
+    if (width > 1100) {
+      crossAxisCount = 3;
+      horizontalPadding = 60;
+    } else if (width > 700) {
+      crossAxisCount = 2;
+      horizontalPadding = 48;
+    } else {
+      crossAxisCount = 1;
+      horizontalPadding = 24;
+    }
+
+    // Build rows of cards
+    final List<Widget> rows = [];
+    for (int i = 0; i < projects.length; i += crossAxisCount) {
+      final rowProjects = projects.sublist(
+        i,
+        (i + crossAxisCount).clamp(0, projects.length),
+      );
+
+      rows.add(
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: List.generate(rowProjects.length, (j) {
+              final globalIndex = i + j;
+              return Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    right: j < rowProjects.length - 1 ? 18 : 0,
+                  ),
+                  child: AnimateOnScroll(
+                    delay: Duration(milliseconds: globalIndex * 120),
+                    child: ProjectCard(
+                      project: rowProjects[j],
+                      onTap: rowProjects[j].images.isNotEmpty
+                          ? () => _openProject(context, rowProjects[j])
+                          : null,
+                    ),
+                  ),
+                ),
+              );
+            }),
+            // Fill remaining slots in last row to keep alignment
+          ),
+        ),
+      );
+
+      if (i + crossAxisCount < projects.length) {
+        rows.add(const SizedBox(height: 20));
+      }
+    }
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: isWide ? 60 : 28,
+        horizontal: horizontalPadding,
         vertical: AppSpacing.xxl,
       ),
       child: Column(
@@ -25,44 +80,7 @@ class ProjectsSection extends StatelessWidget {
             label: '// projects',
             title: "What I've built",
           ),
-          isWide
-              ? Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: List.generate(projects.length, (i) {
-                    return Expanded(
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          right: i == projects.length - 1 ? 0 : 18,
-                        ),
-                        child: AnimateOnScroll(
-                          delay: Duration(milliseconds: i * 150),
-                          child: ProjectCard(
-                            project: projects[i],
-                            onTap: projects[i].images.isNotEmpty
-                                ? () => _openProject(context, projects[i])
-                                : null,
-                          ),
-                        ),
-                      ),
-                    );
-                  }),
-                )
-              : Column(
-                  children: List.generate(projects.length, (i) {
-                    return Padding(
-                      padding: const EdgeInsets.only(bottom: 18),
-                      child: AnimateOnScroll(
-                        delay: Duration(milliseconds: i * 150),
-                        child: ProjectCard(
-                          project: projects[i],
-                          onTap: projects[i].images.isNotEmpty
-                              ? () => _openProject(context, projects[i])
-                              : null,
-                        ),
-                      ),
-                    );
-                  }),
-                ),
+          ...rows,
         ],
       ),
     );
@@ -71,7 +89,8 @@ class ProjectsSection extends StatelessWidget {
   void _openProject(BuildContext context, ProjectModel project) {
     Navigator.of(context).push(
       PageRouteBuilder(
-        pageBuilder: (ctx, anim, secAnim) => ProjectDetailScreen(project: project),
+        pageBuilder: (ctx, anim, secAnim) =>
+            ProjectDetailScreen(project: project),
         transitionsBuilder: (ctx, animation, secAnim, child) {
           return FadeTransition(
             opacity: CurvedAnimation(
